@@ -1,35 +1,35 @@
 
 
-# <p align="center">epgsearch Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/epgsearch.svg)</p>
+# <p align="center">EPGSearch Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/EPGSearch.svg)</p>
 
 **search the epg and list results**
 
 
 ## Github status
-[![Build](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/buildbot.yml/badge.svg)](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/buildbot.yml)
-[![Lint Status](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/pylint.yml/badge.svg)](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/pylint.yml)
-[![Ruff Status](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/ruff.yml/badge.svg)](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/ruff.yml)
-[![Build Status](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/compile.yml/badge.svg)](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/compile.yml)
-[![AUTOTAG](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/autotag.yml/badge.svg)](https://github.com/oe-alliance-plugins/epgsearch/actions/workflows/autotag.yml)
+[![Build](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/buildbot.yml/badge.svg)](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/buildbot.yml)
+[![Lint Status](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/pylint.yml/badge.svg)](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/pylint.yml)
+[![Ruff Status](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/ruff.yml/badge.svg)](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/ruff.yml)
+[![Build Status](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/compile.yml/badge.svg)](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/compile.yml)
+[![AUTOTAG](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/autotag.yml/badge.svg)](https://github.com/oe-alliance-plugins/EPGSearch/actions/workflows/autotag.yml)
 
 
-[![Plugin Version](https://img.shields.io/github/v/tag/oe-alliance-plugins/epgsearch?label=Latest%20Version&color=darkviolet)](https://github.com/oe-alliance-plugins/epgsearch/tags)
-[![Latest Release](https://img.shields.io/github/release-date/oe-alliance-plugins/epgsearch?label=From&color=darkviolet)](https://github.com/oe-alliance-plugins/epgsearch/releases/latest)
-[![Github last commit](https://img.shields.io/github/last-commit/oe-alliance-plugins/epgsearch)](https://github.com/oe-alliance-plugins/epgsearch)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/y/oe-alliance-plugins/epgsearch.svg?label=commits)](https://github.com/oe-alliance-plugins/epgsearch/commits)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/m/oe-alliance-plugins/epgsearch.svg?label=commits)](https://github.com/oe-alliance-plugins/epgsearch/commits)
+[![Plugin Version](https://img.shields.io/github/v/tag/oe-alliance-plugins/EPGSearch?label=Latest%20Version&color=darkviolet)](https://github.com/oe-alliance-plugins/EPGSearch/tags)
+[![Latest Release](https://img.shields.io/github/release-date/oe-alliance-plugins/EPGSearch?label=From&color=darkviolet)](https://github.com/oe-alliance-plugins/EPGSearch/releases/latest)
+[![Github last commit](https://img.shields.io/github/last-commit/oe-alliance-plugins/EPGSearch)](https://github.com/oe-alliance-plugins/EPGSearch)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/y/oe-alliance-plugins/EPGSearch.svg?label=commits)](https://github.com/oe-alliance-plugins/EPGSearch/commits)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/m/oe-alliance-plugins/EPGSearch.svg?label=commits)](https://github.com/oe-alliance-plugins/EPGSearch/commits)
 
 ## SonarCloud status
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=bugs)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_epgsearch&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=bugs)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_EPGSearch&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
 
-[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_epgsearch)
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_EPGSearch)
 
 ---
 
@@ -45,7 +45,7 @@ This plugin is released under GPLv3. See [LICENSE](https://www.gnu.org/licenses/
 
 ### 🤝 Contributing & Contact
 
-epgsearch is created by users for users and we welcome every contribution. There are no highly paid developers. There are only users who have seen a problem and done their best to fix it. This means epgsearch will always need the contributions of users like you. How can you get involved?
+EPGSearch is created by users for users and we welcome every contribution. There are no highly paid developers. There are only users who have seen a problem and done their best to fix it. This means EPGSearch will always need the contributions of users like you. How can you get involved?
 
 For questions or feedback, feel free and please open an issue or contribute with a Pull Request!
 
