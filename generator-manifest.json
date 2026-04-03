@@ -1,0 +1,18 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "search the epg and list results",
+  "description_recipe": "search the epg and list results",
+  "history_source_dir": "epgsearch",
+  "internal_package_name": "enigma2-plugin-extensions-epgsearch",
+  "module_dir_name": "EPGSearch",
+  "output_subdir": "epgsearch",
+  "package_name": "enigma2-plugin-extensions-epgsearch",
+  "plugin_src_rel": "epgsearch",
+  "python_package": "EPGSearch",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "epgsearch",
+  "rrecommends": "",
+  "rreplaces": ""
+}
