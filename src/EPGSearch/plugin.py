@@ -66,7 +66,7 @@ pluginlist = PluginDescriptor(name=_("EPGSearch"), description=_("Search EPG"), 
 
 
 def Plugins(**kwargs):
-	l = [
+	items = [
 		PluginDescriptor(
 			# TRANSLATORS: EPGSearch title in EventInfo dialog (does not require further user interaction)
 			# TRANSLATORS: %s inserts a non-printing character and is only used to control the sort order of these WHERE_EVENTINFO entries in Screens.ButtonSetup. Please leave it at the start of the translation string.
@@ -102,6 +102,6 @@ def Plugins(**kwargs):
 	]
 
 	if config.plugins.epgsearch.showinplugins.value:
-		l.append(pluginlist)
+		items.append(pluginlist)
 
-	return l
+	return items

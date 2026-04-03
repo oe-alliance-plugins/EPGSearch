@@ -25,7 +25,7 @@ from Components.ActionMap import ActionMap, HelpableActionMap
 from Components.Button import Button
 from Components.Label import Label
 from Components.config import config
-from Components.EpgList import EPGList, Rect, EPG_TYPE_SINGLE, EPG_TYPE_MULTI
+from Components.EpgList import EPGList, Rect, EPG_TYPE_SINGLE
 from Components.TimerList import TimerList
 from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.Event import Event
@@ -43,7 +43,7 @@ import six
 from six.moves import reduce
 from functools import reduce
 
-SIGN = '°' if six.PY3 else str('\xc2\xb0')
+SIGN = '°'
 
 
 # Partnerbox installed and icons in epglist enabled?
@@ -649,7 +649,7 @@ class EPGSearch(EPGSelection):
 		searchString = searchString.replace("\xc2\x86", "").replace("\xc2\x87", "")
 		if encoding != "UTF-8":
 			print("[EPGSearch] encoding = %s" % encoding)
-			searchString = searchString.decode("UTF-8").encode(encoding) if six.PY2 else searchString.encode(encoding).decode("UTF-8")
+			searchString = searchString.encode(encoding).decode("UTF-8")
 		search_type = {
 			"partial": eEPGCache.PARTIAL_TITLE_SEARCH,
 			"partialdes": eEPGCache.PARTIAL_DESCRIPTION_SEARCH,
