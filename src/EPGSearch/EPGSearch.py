@@ -362,11 +362,11 @@ class EPGSearch(EPGSelection):
 		elif self.currSearch:
 			self.searchEPG(self.currSearch, lastAsk=self.lastAsk)
 		else:
-			l = self["list"]
-			l.instance.setSelectionEnable(True)
-			l.list = []
-			l.l.setList(l.list)
-			l.recalcEntrySize()
+			epg_list = self["list"]
+			epg_list.instance.setSelectionEnable(True)
+			epg_list.list = []
+			epg_list.l.setList(epg_list.list)
+			epg_list.recalcEntrySize()
 
 	def closeScreen(self):
 		# Save our history
@@ -624,15 +624,15 @@ class EPGSearch(EPGSelection):
 				EPGSelection.close(self)
 
 	def startSearchEPG(self, searchString, searchScope):
-		l = self["list"]
-		l.instance.setSelectionEnable(False)
+		epg_search_list = self["list"]
+		epg_search_list.instance.setSelectionEnable(False)
 		# Match an RIBDT search for dummy entries
 		invalSref = eServiceReference().toString()
 		searching = [(invalSref, -1, -1, -1, "")] * (config.epgselection.enhanced_itemsperpage.value // 2)
 		searching.append((invalSref, -1, -1, -1, _("Searching...")))
-		l.list = searching
-		l.l.setList(searching)
-		l.recalcEntrySize()
+		epg_search_list.list = searching
+		epg_search_list.l.setList(searching)
+		epg_search_list.recalcEntrySize()
 
 		del self.searchStartTimer.callback[:]
 		self.searchStartTimer.callback.append(lambda: self.doSearchEPG(searchString, searchScope))
@@ -677,29 +677,29 @@ class EPGSearch(EPGSelection):
 		ret.sort(key=itemgetter(2))  # sort by time
 
 		# Update List
-		l = self["list"]
-		l.instance.setSelectionEnable(True)
-		l.list = ret
-		l.l.setList(ret)
+		epg_list = self["list"]
+		epg_list.instance.setSelectionEnable(True)
+		epg_list.list = ret
+		epg_list.l.setList(ret)
 
 		# jump to entry neearest current time, copied from
 		# https://github.com/openatv/enigma2/blob/628e1a712c59fca16793b225b393a59417072ba6/lib/python/Components/EpgList.py#L1460
-		t = time()
+		now = int(time())
 		histhours = 0
 		if hasattr(config.epg, "histminutes"):
 			histhours = config.epg.histminutes.value * 60
-		epg_time = t - histhours
-		if t != epg_time:
+		epg_time = now - histhours
+		if now != epg_time:
 			idx = 0
-			for x in l.list:
+			for epg_entry in epg_list.list:
 				idx += 1
-				if t < x[2] + x[3]:
+				if now < epg_entry[2] + epg_entry[3]:
 					break
-			l.instance.moveSelectionTo(idx - 1)
+			epg_list.instance.moveSelectionTo(idx - 1)
 		else:
-			l.instance.moveSelectionTo(1)
+			epg_list.instance.moveSelectionTo(1)
 
-		l.recalcEntrySize()
+		epg_list.recalcEntrySize()
 
 	def _filteredSearchByName(self, args, maxRet, search_type, searchString, search_case, searchFilter):
 		srefEntry = args.index("R")
@@ -881,15 +881,15 @@ class EPGSearchTimerImport(Screen):
 		self.setTitle(_("Select a timer to search"))
 
 	def fillTimerList(self):
-		l = self.list
-		del l[:]
+		timer_list = self.list
+		del timer_list[:]
 
 		for timer in self.session.nav.RecordTimer.timer_list:
-			l.append((timer, False))
+			timer_list.append((timer, False))
 
 		for timer in self.session.nav.RecordTimer.processed_timers:
-			l.append((timer, True))
-		l.sort(key=lambda x: x[0].begin)
+			timer_list.append((timer, True))
+		timer_list.sort(key=lambda x: x[0].begin)
 
 	def search(self):
 		cur = self["timerlist"].getCurrent()
