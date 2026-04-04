@@ -193,7 +193,7 @@ def updateNumOrbpos(choiceList, save):
 	maxEntries = max(len(choiceList) - 1, 0)
 	oldVal = int(config.plugins.epgsearch.numorbpos.value)
 	choices = [str(i) for i in range(maxEntries + 1)]
-	oldMax = len(config.plugins.epgsearch.numorbpos.choices) - 1
+	# oldMax = len(config.plugins.epgsearch.numorbpos.choices) - 1
 	if oldVal > maxEntries:
 		config.plugins.epgsearch.numorbpos.value = str(maxEntries)
 	config.plugins.epgsearch.numorbpos.setChoices(choices, default="1")

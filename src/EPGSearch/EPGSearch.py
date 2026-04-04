@@ -331,7 +331,7 @@ class EPGSearch(EPGSelection):
 		# Hook up actions for yttrailer if installed
 		try:
 			from Plugins.Extensions.YTTrailer.plugin import baseEPGSelection__init__
-		except ImportError as ie:
+		except ImportError:
 			pass
 		else:
 			if baseEPGSelection__init__ is not None:
@@ -536,7 +536,7 @@ class EPGSearch(EPGSelection):
 		try:
 			from Plugins.Extensions.IMDb.plugin import IMDB
 			self.session.open(IMDB, cur[0].getEventName())
-		except ImportError as ie:
+		except ImportError:
 			pass
 
 	def getReSearchSetings(self):
@@ -946,7 +946,7 @@ class EPGSearchEPGSelection(EPGSelection):
 		if not InfoBarInstance.LongButtonPressed:
 			cur = self["list"].getCurrent()
 			evt = cur[0]
-			sref = cur[1]
+			# sref = cur[1]
 			if not evt:
 				return
 
