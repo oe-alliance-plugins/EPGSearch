@@ -739,7 +739,7 @@ class EPGSearch(EPGSelection):
 
 		searchFilter = reduce(lambda acc, val: acc.union(val), six.itervalues(searchFilter), set())
 
-		partialMatchFunc = lambda s: searchString in s
+		partialMatchFunc = lambda s: searchString in s  # noqa: E731
 		matchFunc = {
 			eEPGCache.PARTIAL_TITLE_SEARCH: partialMatchFunc,
 			eEPGCache.EXAKT_TITLE_SEARCH: lambda s: searchString == s,
@@ -749,7 +749,7 @@ class EPGSearch(EPGSelection):
 			caseMatchFunc = matchFunc
 		else:
 			searchString = searchString.lower()
-			caseMatchFunc = lambda s: matchFunc(s.lower())
+			caseMatchFunc = lambda s: matchFunc(s.lower())  # noqa: E731
 
 		ret = []
 		for sref in self._sourceFilter(searchFilter):
