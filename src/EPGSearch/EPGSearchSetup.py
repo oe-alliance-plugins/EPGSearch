@@ -184,10 +184,6 @@ class _EPGSearchSetup(ConfigListScreen, Screen):
 	def getCurrentValue(self):
 		return str(self["config"].getCurrent()[1].getText())
 
-	def createSummary(self):
-		from Screens.Setup import SetupSummary
-		return SetupSummary
-
 	def save(self):
 		purgeOrbposConfig()
 		self.saveAll()

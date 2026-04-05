@@ -40,7 +40,6 @@ from collections import defaultdict
 from skin import parameters as skinparameter
 
 import six
-from six.moves import reduce
 from functools import reduce
 
 SIGN = '°'
