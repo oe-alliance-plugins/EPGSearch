@@ -39,7 +39,6 @@ from collections import defaultdict
 
 from skin import parameters as skinparameter
 
-import six
 from functools import reduce
 
 SIGN = '°'
@@ -584,7 +583,7 @@ class EPGSearch(EPGSelection):
 			self.searchEPG(ret[1])
 
 	def searchEPG(self, searchString=None, searchSave=True, lastAsk=None):
-		if isinstance(searchString, six.string_types) and searchString:
+		if isinstance(searchString, str) and searchString:
 			if searchSave:
 				# Maintain history
 				history = config.plugins.epgsearch.history.value
@@ -736,7 +735,7 @@ class EPGSearch(EPGSelection):
 		if titleEntry < 0:
 			return []
 
-		searchFilter = reduce(lambda acc, val: acc.union(val), six.itervalues(searchFilter), set())
+		searchFilter = reduce(lambda acc, val: acc.union(val), searchFilter.values(), set())
 
 		partialMatchFunc = lambda s: searchString in s  # noqa: E731
 		matchFunc = {
@@ -764,14 +763,14 @@ class EPGSearch(EPGSelection):
 	def _processBouquetServiceRefMap(self, tempServiceRefMap):
 		serviceHandler = eServiceCenter.getInstance()
 		bouquetServiceRefMap = defaultdict(set)
-		for srefId, srefDict in six.iteritems(tempServiceRefMap):
+		for srefId, srefDict in tempServiceRefMap.items():
 			if len(srefDict) > 1 and "" in srefDict:
 				noName = srefDict[""]
 				info = serviceHandler.info(noName)
 				name = info and info.getName(noName) or ""
 				if name and name in srefDict:
 					del srefDict[""]
-			bouquetServiceRefMap[srefId[2:5]].update(sref.toString() for sref in six.itervalues(srefDict))
+			bouquetServiceRefMap[srefId[2:5]].update(sref.toString() for sref in srefDict.values())
 		return bouquetServiceRefMap
 
 	def _addBouquetTempServiceRefMap(self, bouquet, tempServiceRefMap):
