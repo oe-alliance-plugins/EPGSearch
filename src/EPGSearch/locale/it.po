@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 - epgsearch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-16 19:06+0430\n"
+"POT-Creation-Date: 2026-04-08 10:12+0200\n"
 "PO-Revision-Date: 2023-12-10 06:02+0100\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <>\n"
@@ -19,325 +19,404 @@ msgstr ""
 "X-Poedit-SearchPath-0: .../enigma2-plugins/epgsearch\n"
 "X-Generator: Lokalize 23.08.3\n"
 
+#: ../EPGSearch.py:148
 msgid "%e/%m, %H:%M"
 msgstr "%e/%m, %H:%M"
 
 #. TRANSLATORS: EPGSearch title in EventInfo dialog (does not require further user interaction)
 #. TRANSLATORS: %s inserts a non-printing character and is only used to control the sort order of these WHERE_EVENTINFO entries in Screens.ButtonSetup. Please leave it at the start of the translation string.
+#: ../plugin.py:73
 #, python-format
 msgid "%ssearch EPG"
 msgstr "%scerca EPG"
 
 #. TRANSLATORS: EPGSearch search from search history in EventInfo dialog (requires the user to select a history item to search for)
 #. TRANSLATORS: %s inserts a non-printing character and is only used to control the sort order of these WHERE_EVENTINFO entries in Screens.ButtonSetup. Please leave it at the start of the translation string.
+#: ../plugin.py:81
 #, python-format
 msgid "%ssearch EPG from history..."
 msgstr "%scerca EPG dalla cronologia..."
 
+#: ../EPGSearch.py:228
 msgid "Add AutoTimer"
 msgstr "Aggiungi AutoTimer"
 
+#: ../EPGSearch.py:249
 msgid "Add Timer"
 msgstr "Aggiungi timer"
 
+#: ../EPGSearch.py:280
 msgid "Add a record timer for highlighted event"
 msgstr "Aggiungi timer di registrazione per l'evento evidenziato"
 
+#: ../EPGSearch.py:281
 msgid "Add a zap timer for highlighted event"
 msgstr "Aggiungi timer di zap per l'evento evidenziato"
 
+#: ../EPGSearch.py:274
 msgid "Add an AutoTimer for highlighted event"
 msgstr "Aggiungi AutoTimer per l'evento evidenziato"
 
+#: ../EPGSearch.py:271
 msgid "Add/remove/edit timer for highlighted event"
 msgstr "Aggiungi/rimuovi/modifica timer per l'evento evidenziato"
 
+#: ../EPGSearch.py:600
 msgid "All bouquets"
 msgstr "Tutti i bouquet"
 
+#: ../EPGSearch.py:599
 msgid "All services"
 msgstr "Tutti i servizi"
 
+#: ../EPGSearch.py:865
 msgid "Cancel"
 msgstr "Annulla"
 
+#: ../EPGSearch.py:903
 msgid "Channel Selection"
 msgstr "Selezione canale"
 
+#: ../setup.xml
 msgid "Choose the encoding type for searches, helpful for foreign languages."
-msgstr ""
-"Scegli il tipo di codifica per le ricerche, utile per le lingue straniere."
+msgstr "Scegli il tipo di codifica per le ricerche, utile per le lingue straniere."
 
+#: ../EPGSearch.py:257
 msgid "Close dialog"
 msgstr "Chiudi finestra di dialogo"
 
-msgid ""
-"Control where to search in the EPG. When 'all bouquets' is set, all bouquets "
-"are searched, even if 'Enable multiple bouquets' is disabled."
-msgstr ""
-"Controlla dove cercare nell'EPG. Se impostato su 'Tutti i bouquet' la ricerca"
-" verrà effettuata in tutti i bouquet, anche se 'Abilita bouquet multipli' è"
-" disabilitato."
+#: ../setup.xml
+msgid "Control where to search in the EPG. When 'all bouquets' is set, all bouquets are searched, even if 'Enable multiple bouquets' is disabled."
+msgstr "Controlla dove cercare nell'EPG. Se impostato su 'Tutti i bouquet' la ricerca verrà effettuata in tutti i bouquet, anche se 'Abilita bouquet multipli' è disabilitato."
 
+#: ../EPGSearch.py:509
 #, python-format
 msgid "Could not read AutoTimer timer list: %s"
 msgstr "Impossibile leggere l'elenco di AutoTimer: %s"
 
+#: ../EPGSearch.py:601
 msgid "Current bouquet"
 msgstr "Bouquet attuale"
 
+#: ../EPGSearch.py:602
 msgid "Current service"
 msgstr "Servizio attuale"
 
+#: ../EPGSearch.py:195
 msgid "DVB-C"
 msgstr "DVB-C"
 
+#: ../__init__.py:85
 msgid "DVB-C Cable services"
 msgstr "Servizi via cavo DVB-C"
 
+#: ../EPGSearch.py:193
 msgid "DVB-T"
 msgstr "DVB-T"
 
+#: ../__init__.py:83
 msgid "DVB-T Terrestrial services"
 msgstr "Servizi terrestri DVB-T"
 
+#: ../setup.xml
 msgid "Default scope when asked"
 msgstr "Ambito predefinito quando richiesto"
 
+#: ../EPGSearch.py:343
 msgid "EPG Search"
 msgstr "Ricerca EPG"
 
+#: ../EPGSearch.py:483
 msgid "EPG Search setup"
 msgstr "Configurazione ricerca EPG"
 
+#: ../EPGSearchSetup.py:69 ../plugin.py:65
 msgid "EPGSearch"
 msgstr "Ricerca EPG"
 
+#: ../EPGSearchSetup.py:18 ../setup.xml
 msgid "EPGSearch Setup"
 msgstr "Configurazione Ricerca EPG"
 
-msgid ""
-"Enable this to allow access to EPG Search from within the plugin browser."
-msgstr ""
-"Abilita questa opzione per consentire l'accesso alla ricerca EPG dal browser"
-" del plugin."
+#: ../setup.xml
+msgid "Enable this to allow access to EPG Search from within the plugin browser."
+msgstr "Abilita questa opzione per consentire l'accesso alla ricerca EPG dal browser del plugin."
 
+#: ../EPGSearch.py:272
 msgid "Enter new search"
 msgstr "Inserisci nuova ricerca"
 
+#: ../EPGSearch.py:465
 msgid "Enter text to search for"
 msgstr "Inserisci testo da cercare"
 
+#: ../EPGSearchSetup.py:56
 msgid "Exclude results from"
 msgstr "Escludi risultati da"
 
+#: ../EPGSearch.py:263
 msgid "Exit EPG Search"
 msgstr "Esci da Ricerca EPG"
 
+#: ../EPGSearchSetup.py:50
 msgid "Filter results by source"
 msgstr "Filtra i risultati per fonte"
 
+#: ../EPGSearch.py:270
 msgid "IMDB search for highlighted event"
 msgstr "Cerca su IMDb l'evento evidenziato"
 
+#: ../EPGSearch.py:248
 msgid "IMDb Search"
 msgstr "Ricerca IMDb"
 
+#: ../EPGSearch.py:253
+msgid "INFO"
+msgstr ""
+
+#: ../EPGSearch.py:476
 msgid "Import from AutoTimer"
 msgstr "Importa da AutoTimer"
 
+#: ../EPGSearch.py:470
 msgid "Import from EPG"
 msgstr "Importa da EPG"
 
+#: ../EPGSearch.py:469
 msgid "Import from Timer"
 msgstr "Importa da timer"
 
-msgid ""
-"Include or exclude results depending on their source (e.g. by satellite)"
-msgstr ""
-"Includi o escludi i risultati a seconda della loro fonte (ad esempio via"
-" satellite)"
+#: ../EPGSearchSetup.py:50
+msgid "Include or exclude results depending on their source (e.g. by satellite)"
+msgstr "Includi o escludi i risultati a seconda della loro fonte (ad esempio via satellite)"
 
+#: ../EPGSearchSetup.py:56
 msgid "Include results from"
 msgstr "Includi risultati da"
 
+#: ../EPGSearchSetup.py:57
 msgid "Include/exclude search results from this type of source"
 msgstr "Includi/escludi i risultati della ricerca da questo tipo di origine"
 
+#: ../EPGSearchSetup.py:53
 msgid "Include/exclude sources"
 msgstr "Includi/escludi fonti"
 
+#: ../setup.xml
 msgid "Is the search case-sensitive or case-insensitive?"
 msgstr "La ricerca fa distinzione tra maiuscole e minuscole?"
 
+#: ../setup.xml
 msgid "Length of history"
 msgstr "Lunghezza cronologia"
 
-msgid ""
-"Maximum number of entries in the search history. Set this to 0 to disable "
-"search history."
+#: ../EPGSearch.py:252
+msgid "MENU"
 msgstr ""
-"Numero massimo di voci nella cronologia delle ricerche. Impostalo su 0 per"
-" disabilitare la cronologia delle ricerche."
 
+#: ../setup.xml
+msgid "Maximum number of entries in the search history. Set this to 0 to disable search history."
+msgstr "Numero massimo di voci nella cronologia delle ricerche. Impostalo su 0 per disabilitare la cronologia delle ricerche."
+
+#: ../EPGSearch.py:301
 msgid "Move down"
 msgstr "Sposta giù"
 
+#: ../EPGSearch.py:286 ../EPGSearch.py:289 ../EPGSearch.py:299
 msgid "Move down a page"
 msgstr "Scorri una pagina verso il basso"
 
+#: ../EPGSearch.py:300
 msgid "Move up"
 msgstr "Sposta su"
 
+#: ../EPGSearch.py:287 ../EPGSearch.py:288 ../EPGSearch.py:298
 msgid "Move up a page"
 msgstr "Scorri una pagina verso l'alto"
 
+#: ../EPGSearch.py:227
 msgid "New Search"
 msgstr "Nuova ricerca"
 
+#: ../EPGSearch.py:573
 msgid "No history"
 msgstr "Nessuna cronologia"
 
+#: ../EPGSearchSetup.py:54
 msgid "Number of filters for inclusion/exclusion of results"
 msgstr "Numero filtri da includere/escludere dai risultati"
 
+#: ../EPGSearchSetup.py:54
 msgid "Number of inclusions/exclusions"
 msgstr "Numero da includere/escludere"
 
+#: ../EPGSearch.py:866
 msgid "OK"
 msgstr "OK"
 
+#: ../EPGSearch.py:480
 msgid "Open selected in IMDb"
 msgstr "Apri selezionato in IMDb"
 
+#: ../EPGSearch.py:477
 msgid "Save search as AutoTimer"
 msgstr "Salva ricerca come AutoTimer"
 
+#: ../EPGSearch.py:931 ../EPGSearch.py:958
 msgid "Search"
 msgstr "Cerca"
 
+#: ../plugin.py:65
 msgid "Search EPG"
 msgstr "Cerca EPG"
 
+#: ../setup.xml
 msgid "Search encoding"
 msgstr "Cerca codifica"
 
+#: ../EPGSearch.py:606
 msgid "Search in..."
 msgstr "Cerca nel..."
 
+#: ../setup.xml
 msgid "Search scope"
 msgstr "Ambito di ricerca"
 
+#: ../setup.xml
 msgid "Search strictness"
 msgstr "Cerca rigore"
 
+#: ../setup.xml
 msgid "Search type"
 msgstr "Tipo di ricerca"
 
+#: ../EPGSearch.py:630
 msgid "Searching..."
 msgstr "Ricerca in corso..."
 
+#: ../EPGSearch.py:879
 msgid "Select a timer to search"
 msgstr "Seleziona timer da cercare"
 
+#: ../EPGSearch.py:515 ../EPGSearch.py:571
 msgid "Select text to search for"
 msgstr "Seleziona testo da cercare"
 
-msgid ""
-"Set type of match used to compare program titles with the search string."
-msgstr ""
-"Imposta il tipo di abbinamento utilizzato per confrontare i titoli dei"
-" programmi con la stringa di ricerca."
+#: ../setup.xml
+msgid "Set type of match used to compare program titles with the search string."
+msgstr "Imposta il tipo di abbinamento utilizzato per confrontare i titoli dei programmi con la stringa di ricerca."
 
+#: ../setup.xml
 msgid "Sets the default search scope when the user is asked."
-msgstr ""
-"Imposta l'ambito di ricerca predefinito quando viene richiesto all'utente."
+msgstr "Imposta l'ambito di ricerca predefinito quando viene richiesto all'utente."
 
+#: ../EPGSearch.py:481 ../EPGSearch.py:603
 msgid "Setup"
 msgstr "Configurazione"
 
+#: ../EPGSearch.py:293
 msgid "Setup menu"
 msgstr "Menu di configurazione"
 
+#: ../EPGSearch.py:275
 msgid "Show AutoTimer list"
 msgstr "Mostra elenco AutoTimer"
 
+#: ../EPGSearch.py:265 ../EPGSearch.py:290 ../EPGSearch.py:291
+#: ../EPGSearch.py:292
 msgid "Show detailed event information"
 msgstr "Mostra informazioni dettagliate sull'evento"
 
+#: ../setup.xml
 msgid "Show in plugin browser"
 msgstr "Mostra nel browser plugin"
 
+#: ../setup.xml
 msgid "Show orbital position"
 msgstr "Mostra posizione orbitale"
 
+#: ../setup.xml
 msgid "Show satellite orbital positions in the search results."
 msgstr "Mostra posizioni orbitali dei satelliti nei risultati della ricerca."
 
+#: ../EPGSearch.py:273 ../EPGSearch.py:471
 msgid "Show search history"
 msgstr "Mostra cronologia ricerche"
 
+#: ../EPGSearch.py:190
 msgid "Stream"
 msgstr "Stream"
 
-msgid ""
-"Use source restrictions below to only include results from the sources, or "
-"exclude them."
-msgstr ""
-"Usa restrizioni sulle fonti riportate di seguito per includere o escludere"
-" solo i risultati delle fonti."
+#: ../EPGSearchSetup.py:53
+msgid "Use source restrictions below to only include results from the sources, or exclude them."
+msgstr "Usa restrizioni sulle fonti riportate di seguito per includere o escludere solo i risultati delle fonti."
 
+#: ../EPGSearch.py:264
 msgid "Zap to channel"
 msgstr "Zap al canale"
 
+#: ../__init__.py:38 ../__init__.py:39
 msgid "all bouquets"
 msgstr "tutti i bouquet"
 
+#: ../__init__.py:38 ../__init__.py:39
 msgid "all services"
 msgstr "tutti i servizi"
 
+#: ../__init__.py:38
 msgid "ask user"
 msgstr "chiedi all'utente"
 
+#: ../__init__.py:41
 msgid "case-insensitive search"
 msgstr "ricerca senza distinzione tra maiuscole e minuscole"
 
+#: ../__init__.py:41
 msgid "case-sensitive search"
 msgstr "ricerca con distinzione tra maiuscole e minuscole"
 
+#: ../__init__.py:38 ../__init__.py:39
 msgid "current bouquet"
 msgstr "bouquet attuale"
 
+#: ../__init__.py:38 ../__init__.py:39
 msgid "current service"
 msgstr "servizio attuale"
 
+#: ../__init__.py:73
 msgid "disabled"
 msgstr "disabilitato"
 
+#: ../__init__.py:40
 msgid "exact match"
 msgstr "abbinamento esatto"
 
+#: ../__init__.py:205
 msgid "exclude"
 msgstr "escludi"
 
+#: ../EPGSearch.py:846 ../EPGSearchSetup.py:56 ../__init__.py:205
 msgid "include"
 msgstr "includi"
 
+#: ../__init__.py:40
 msgid "partial description"
 msgstr "descrizione parziale"
 
+#: ../__init__.py:40
 msgid "partial match"
 msgstr "corrispondenza parziale"
 
 #. TRANSLATORS: EPGSearch title in MovieList (does not require further user interaction)
+#: ../plugin.py:88 ../plugin.py:89
 msgid "search EPG"
 msgstr "cerca EPG"
 
 #. TRANSLATORS: EPGSearch search from search history in MovieList (requires the user to select a history item to search for)
+#: ../plugin.py:96 ../plugin.py:97
 msgid "search EPG from history..."
 msgstr "cerca EPG dalla cronologia..."
 
+#: ../__init__.py:40
 msgid "title starts with"
 msgstr "titolo inizia con"
-
-
