@@ -417,5 +417,5 @@ msgid "search EPG from history..."
 msgstr "Hae ohjelmaoppaan hakuhistoriasta"
 
 #: ../__init__.py:40
-msgid "title starts with"
+msgid "Title starts with"
 msgstr "Nimi alkaa"

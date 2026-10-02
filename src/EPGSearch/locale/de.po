@@ -301,8 +301,8 @@ msgid "Select text to search for"
 msgstr "Zu suchenden Text auswählen"
 
 #: ../setup.xml
-msgid "Set type of match used to compare program titles with the search string."
-msgstr "Legen Sie die Art der Übereinstimmung fest, um die Sendungstitel mit dem Suchbegriff zu vergleichen."
+msgid "Set how the search string is compared against the program title or description."
+msgstr "Legt fest, wie der Suchbegriff mit dem Titel oder der Beschreibung der Sendung verglichen wird."
 
 #: ../setup.xml
 msgid "Sets the default search scope when the user is asked."
@@ -386,8 +386,8 @@ msgid "disabled"
 msgstr ""
 
 #: ../__init__.py:40
-msgid "exact match"
-msgstr "genaue Übereinstimmung"
+msgid "Title matches exactly"
+msgstr "Titel stimmt genau überein"
 
 #: ../__init__.py:205
 msgid "exclude"
@@ -398,12 +398,12 @@ msgid "include"
 msgstr ""
 
 #: ../__init__.py:40
-msgid "partial description"
-msgstr ""
+msgid "Description contains"
+msgstr "Beschreibung enthält"
 
 #: ../__init__.py:40
-msgid "partial match"
-msgstr "teilweise Übereinstimmung"
+msgid "Title contains"
+msgstr "Titel enthält"
 
 #. TRANSLATORS: EPGSearch title in MovieList (does not require further user interaction)
 #: ../plugin.py:88 ../plugin.py:89
@@ -416,5 +416,5 @@ msgid "search EPG from history..."
 msgstr "Durchsuche EPG aus Verlauf..."
 
 #: ../__init__.py:40
-msgid "title starts with"
+msgid "Title starts with"
 msgstr "Titel beginnt mit"

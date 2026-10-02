@@ -737,9 +737,17 @@ class EPGSearch(EPGSelection):
 
 		searchFilter = reduce(lambda acc, val: acc.union(val), searchFilter.values(), set())
 
+		if search_type == eEPGCache.PARTIAL_DESCRIPTION_SEARCH:
+			lookup_args = args + "SE"
+			match_entries = (len(args), len(args) + 1)
+		else:
+			lookup_args = args
+			match_entries = (titleEntry,)
+
 		partialMatchFunc = lambda s: searchString in s  # noqa: E731
 		matchFunc = {
 			eEPGCache.PARTIAL_TITLE_SEARCH: partialMatchFunc,
+			eEPGCache.PARTIAL_DESCRIPTION_SEARCH: partialMatchFunc,
 			eEPGCache.EXAKT_TITLE_SEARCH: lambda s: searchString == s,
 			eEPGCache.START_TITLE_SEARCH: lambda s: s.startswith(searchString),
 		}.get(search_type, partialMatchFunc)
@@ -748,13 +756,15 @@ class EPGSearch(EPGSelection):
 		else:
 			searchString = searchString.lower()
 			caseMatchFunc = lambda s: matchFunc(s.lower())  # noqa: E731
+		event_match_func = lambda event: any(caseMatchFunc(event[entry] or "") for entry in match_entries)  # noqa: E731
 
 		ret = []
+		trim = len(args)
 		for sref in self._sourceFilter(searchFilter):
-			lookup = [args, (sref, 0, 0, -1)]
+			lookup = [lookup_args, (sref, 0, 0, -1)]
 			# Enumerate EPG for service, defaulting to empty list
 			# and apply search, accumulating results
-			ret += [event for event in eEPGCache.getInstance().lookupEvent(lookup) or [] if caseMatchFunc(event[titleEntry])]
+			ret += [event[:trim] for event in eEPGCache.getInstance().lookupEvent(lookup) or [] if event_match_func(event)]
 			if len(ret) > maxRet:
 				del ret[maxRet:]
 				break
