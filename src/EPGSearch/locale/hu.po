@@ -417,5 +417,5 @@ msgid "search EPG from history..."
 msgstr "keresés az Előzmények közül..."
 
 #: ../__init__.py:40
-msgid "title starts with"
+msgid "Title starts with"
 msgstr "ezzel kezdődik a keresett műsor"

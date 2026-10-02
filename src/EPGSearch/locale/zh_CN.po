@@ -414,5 +414,5 @@ msgid "search EPG from history..."
 msgstr "从历史搜索EPG..."
 
 #: ../__init__.py:40
-msgid "title starts with"
+msgid "Title starts with"
 msgstr "标题开始 "
