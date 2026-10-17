@@ -1,22 +1,15 @@
 from __future__ import absolute_import
-# for localized messages
-from . import _
 
 from enigma import eServiceCenter
 
-# Configuration
 from Components.config import config
-
-# Plugin
-from .EPGSearch import EPGSearch, EPGSearchEPGSelection  # noqa: F401
-
-# Plugin definition
 from Plugins.Plugin import PluginDescriptor
 
-# Mainfunction
+from . import _
 
 
 def main(session, *args, **kwargs):
+	from .EPGSearch import EPGSearch  # Load the search screens only when used.
 	s = session.nav.getCurrentService()
 	if s:
 		info = s.info()
@@ -40,6 +33,7 @@ def main(session, *args, **kwargs):
 
 
 def eventinfo(session, eventName="", **kwargs):
+	from .EPGSearch import EPGSearch  # Load the search screens only when used.
 	if not eventName:
 		s = session.nav.getCurrentService()
 		if s:
@@ -50,12 +44,14 @@ def eventinfo(session, eventName="", **kwargs):
 
 
 def seachhistory(session, *args, **kwargs):
+	from .EPGSearch import EPGSearch  # Load the search screens only when used.
 	session.open(EPGSearch, openHistory=True)
 
 # Movielist
 
 
 def movielist(session, service, **kwargs):
+	from .EPGSearch import EPGSearch  # Load the search screens only when used.
 	serviceHandler = eServiceCenter.getInstance()
 	info = serviceHandler.info(service)
 	name = info and info.getName(service) or ''
@@ -105,3 +101,10 @@ def Plugins(**kwargs):
 		items.append(pluginlist)
 
 	return items
+
+
+def __getattr__(name):
+	if name in ("EPGSearch", "EPGSearchEPGSelection"):
+		from . import EPGSearch as searchModule  # Keep external screen imports compatible and lazy.
+		return getattr(searchModule, name)
+	raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
