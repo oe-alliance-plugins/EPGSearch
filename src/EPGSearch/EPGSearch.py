@@ -1,5 +1,4 @@
-from __future__ import absolute_import
-from __future__ import division
+from __future__ import absolute_import, division
 # for localized messages
 from . import _, allowShowOrbital, getOrbposConfList
 
@@ -476,7 +475,8 @@ class EPGSearch(EPGSelection):
 				(_("Import from AutoTimer"), self.importFromAutoTimer),
 				(_("Save search as AutoTimer"), self.addAutoTimer),
 			))
-		if isPluginInstalled("IMDb"):
+		current = self["list"].getCurrent()
+		if current and current[0] is not None and isPluginInstalled("IMDb"):
 			options.append((_("Open selected in IMDb"), self.openImdb))
 		options.append((_("Setup"), self.setup))
 
@@ -528,12 +528,12 @@ class EPGSearch(EPGSelection):
 		addAutotimerFromEvent(self.session, cur[0], cur[1])
 
 	def openImdb(self):
-		cur = self["list"].getCurrent()
-		if cur is None:
+		current = self["list"].getCurrent()
+		if not current or current[0] is None:
 			return
 		try:
-			from Plugins.Extensions.IMDb.plugin import IMDB
-			self.session.open(IMDB, cur[0].getEventName())
+			from Plugins.Extensions.IMDb.plugin import IMDB  # Load the optional plugin only when requested.
+			self.session.open(IMDB, current[0].getEventName())
 		except ImportError:
 			pass
 
